@@ -14,6 +14,7 @@
 | [product/roadmap.md](product/roadmap.md) | フェーズ計画、認証・課金の方針 |
 | [product/plan-limits-and-metrics.md](product/plan-limits-and-metrics.md) | デモ／無料／有料／プレミアムの上限と計測指標 |
 | [product/premium-value.md](product/premium-value.md) | プレミアム版の付加価値機能 |
+| [product/competitive-analysis-and-service-model.md](product/competitive-analysis-and-service-model.md) | 競合8社比較と AI＋2名のモデルケース |
 
 ## design — どう見せるか
 
