@@ -5,6 +5,12 @@
 
 ファイル名は小文字ハイフン区切り。用途ごとに `product` / `design` / `dev` / `ops` / `releases` に分ける。
 
+## 試験運用（プロトタイプ）
+
+| ファイル | 内容 |
+| --- | --- |
+| [prototype-facility-trial.md](prototype-facility-trial.md) | 施設向け検証プロトタイプ（QR セッション・日記／回顧録・Rails＋Android）。料金・製品ロードマップは対象外 |
+
 ## product — 何を作るか
 
 | ファイル | 内容 |
