@@ -5,6 +5,12 @@
 
 ファイル名は小文字ハイフン区切り。用途ごとに `product` / `design` / `dev` / `ops` / `releases` に分ける。
 
+## アイデアメモ
+
+| ファイル | 内容 |
+| --- | --- |
+| [ideas.md](ideas.md) | ランダムな着想の箇条書き置き場（未整理） |
+
 ## 段階ロードマップ（STEP A → B → C）
 
 | STEP | 位置づけ | 主な文書 |
@@ -62,6 +68,7 @@
 ## 置き場所の指針
 
 - 段階（STEP A / B）の検討・試験 → ルート直下の `step-a.md` / `prototype-facility-trial.md`
+- 未整理の着想 → `ideas.md`
 - 製品判断・仕様の方針（STEP C） → `product/`
 - 画面・体験の骨格 → `design/`
 - コードを書く人向け → `dev/`
