@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "語り継ぎ Staff",
+    "slug": "kataritsugi-staff",
+    "version": "0.0.1",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "android": {
+      "package": "com.kataritsugi.staff"
+    }
+  }
+}

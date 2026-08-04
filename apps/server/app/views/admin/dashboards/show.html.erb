@@ -1,0 +1,11 @@
+<h1>Admin</h1>
+<p>ログイン中: <%= current_admin_user.email %></p>
+<%= button_to "ログアウト", admin_logout_path, method: :delete %>
+
+<ul>
+  <li>Users: <%= @users_count %></li>
+  <li>Recording sessions: <%= @sessions_count %></li>
+  <li>Memoirs: <%= @memoirs_count %></li>
+</ul>
+
+<p><a href="<%= admin_users_path %>">ユーザ一覧</a></p>

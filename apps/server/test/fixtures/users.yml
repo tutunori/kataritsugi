@@ -1,0 +1,7 @@
+---
+# テスト用フィクスチャは最小限（本番 seeds を使う）
+one:
+  email: user1@example.com
+  password_digest: <%= BCrypt::Password.create("password123", cost: 4) %>
+  qr_token: test-qr-token-one
+  basic_info: fixture user

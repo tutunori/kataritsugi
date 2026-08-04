@@ -1,0 +1,8 @@
+<h1>新規登録</h1>
+<%= form_with url: register_path do %>
+  <label>メール</label>
+  <%= email_field_tag :email, params[:email], required: true %>
+  <label>パスワード（8文字以上）</label>
+  <%= password_field_tag :password, nil, required: true, minlength: 8 %>
+  <button type="submit">登録</button>
+<% end %>

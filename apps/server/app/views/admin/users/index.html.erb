@@ -1,0 +1,14 @@
+<h1>Users</h1>
+<table>
+  <thead><tr><th>ID</th><th>Email</th><th>QR</th></tr></thead>
+  <tbody>
+    <% @users.each do |u| %>
+      <tr>
+        <td><%= link_to u.id, admin_user_path(u) %></td>
+        <td><%= u.email %></td>
+        <td><code><%= u.qr_token %></code></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<p><a href="<%= admin_root_path %>">戻る</a></p>

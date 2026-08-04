@@ -47,6 +47,7 @@
 
 | ファイル | 内容 |
 | --- | --- |
+| [dev/setup-step-a.md](dev/setup-step-a.md) | STEP A の起動手順・API 概要 |
 | [dev/architecture.md](dev/architecture.md) | システム構成、各層の責務、通信方針 |
 | [dev/data-model.md](dev/data-model.md) | 主要エンティティと関係 |
 | [dev/system-flow.md](dev/system-flow.md) | 基本業務フロー（録音〜自叙伝生成） |

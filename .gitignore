@@ -1,0 +1,54 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/*
+!.vscode/settings.json
+
+# Env / secrets（ルート・各アプリ）
+.env
+.env.*
+!.env.example
+apps/server/config/master.key
+apps/server/config/*.key
+
+# Rails
+apps/server/log/*
+!apps/server/log/.keep
+apps/server/tmp/*
+!apps/server/tmp/.keep
+!apps/server/tmp/pids/
+!apps/server/tmp/pids/.keep
+!apps/server/tmp/storage/
+!apps/server/tmp/storage/.keep
+apps/server/storage/*
+!apps/server/storage/.keep
+!apps/server/storage/downloads/
+apps/server/storage/downloads/*
+!apps/server/storage/downloads/README.md
+apps/server/db/*.sqlite3
+apps/server/db/*.sqlite3-*
+apps/server/vendor/bundle/
+apps/server/vendor/cache/
+apps/server/.bundle/
+apps/server/public/assets/
+apps/server/coverage/
+apps/server/*.log
+
+# Node / Expo（Staff）
+apps/staff/node_modules/
+apps/staff/.expo/
+apps/staff/dist/
+apps/staff/web-build/
+apps/staff/android/
+apps/staff/ios/
+apps/staff/expo-env.d.ts
+*.apk
+*.aab
+
+# 一般
+*.log
+coverage/
+node_modules/

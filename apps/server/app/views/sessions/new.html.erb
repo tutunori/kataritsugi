@@ -1,0 +1,9 @@
+<h1>ログイン</h1>
+<%= form_with url: login_path do %>
+  <label>メール</label>
+  <%= email_field_tag :email, params[:email], required: true %>
+  <label>パスワード</label>
+  <%= password_field_tag :password, nil, required: true %>
+  <button type="submit">ログイン</button>
+<% end %>
+<p><a href="<%= register_path %>">新規登録</a></p>

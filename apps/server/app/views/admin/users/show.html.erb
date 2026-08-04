@@ -1,0 +1,6 @@
+<h1>User #<%= @user.id %></h1>
+<p>Email: <%= @user.email %></p>
+<p>Basic info: <%= simple_format(@user.basic_info) %></p>
+<p>QR: <code><%= @user.qr_token %></code></p>
+<p>Sessions: <%= @user.recording_sessions.count %></p>
+<p><a href="<%= admin_users_path %>">一覧へ</a></p>

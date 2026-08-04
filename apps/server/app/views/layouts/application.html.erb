@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title><%= content_for(:title) || "語り継ぎ STEP A" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= yield :head %>
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; background: #f6f4ef; color: #1c1917; }
+      header { display: flex; gap: 1rem; align-items: center; padding: 0.75rem 1.25rem; background: #1c1917; color: #fafaf9; }
+      header a { color: #e7e5e4; text-decoration: none; }
+      main { max-width: 40rem; margin: 1.5rem auto; padding: 0 1rem; }
+      .flash { padding: 0.75rem 1rem; margin-bottom: 1rem; border-radius: 6px; }
+      .flash.notice { background: #dcfce7; }
+      .flash.alert { background: #fee2e2; }
+      label { display: block; margin: 0.75rem 0 0.25rem; }
+      input[type=text], input[type=email], input[type=password], textarea {
+        width: 100%; box-sizing: border-box; padding: 0.5rem; font-size: 1rem;
+      }
+      button, .btn { display: inline-block; margin-top: 0.75rem; padding: 0.5rem 1rem; background: #1c1917; color: #fff; border: 0; border-radius: 6px; text-decoration: none; }
+      code { background: #e7e5e4; padding: 0.1rem 0.3rem; border-radius: 4px; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <strong>語り継ぎ</strong>
+      <a href="/">ホーム</a>
+      <% if logged_in? %>
+        <a href="<%= mypage_path %>">マイページ</a>
+        <%= button_to "ログアウト", logout_path, method: :delete, form: { style: "display:inline" } %>
+      <% else %>
+        <a href="<%= login_path %>">ログイン</a>
+        <a href="<%= register_path %>">登録</a>
+      <% end %>
+      <a href="<%= admin_root_path %>">Admin</a>
+    </header>
+    <main>
+      <% if notice.present? %><div class="flash notice"><%= notice %></div><% end %>
+      <% if alert.present? %><div class="flash alert"><%= alert %></div><% end %>
+      <%= yield %>
+    </main>
+  </body>
+</html>

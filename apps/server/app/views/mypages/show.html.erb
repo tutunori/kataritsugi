@@ -1,0 +1,23 @@
+<h1>マイページ</h1>
+<p>メール: <code><%= current_user.email %></code></p>
+<p>QR トークン（セッション開始用）: <code><%= current_user.qr_token %></code></p>
+
+<%= form_with url: mypage_path, method: :patch do %>
+  <label>基本情報（テキスト 1 つ）</label>
+  <%= text_area_tag :basic_info, current_user.basic_info, rows: 6, placeholder: "氏名・メモなど" %>
+  <button type="submit">保存</button>
+<% end %>
+
+<h2>セッション</h2>
+<ul>
+  <% current_user.recording_sessions.order(started_at: :desc).limit(20).each do |s| %>
+    <li>#<%= s.id %> <%= s.status %> <%= l(s.started_at, format: :short) rescue s.started_at %></li>
+  <% end %>
+</ul>
+
+<h2>回顧録</h2>
+<ul>
+  <% current_user.memoirs.order(created_at: :desc).each do |m| %>
+    <li>#<%= m.id %> <%= m.status %> <%= m.title %></li>
+  <% end %>
+</ul>

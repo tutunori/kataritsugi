@@ -1,24 +1,48 @@
 # 語り継ぎ（Kataritsugi）
 
-高齢の話者へのインタビュー音声から、感情と事実を残し、自叙伝としてまとめるライフヒストリーサービス（企画中）。
+高齢の話者へのインタビュー音声から、感情と事実を残し、自叙伝としてまとめるライフヒストリーサービス。
 
-購買の主対象は **40〜50 代**。話者の主対象は **80 代前後**。  
-プランは **デモ / フリー / 有料 / プレミアム**。
+現在は **STEP A**（簡易稼働プロトタイプ）の実装中。
 
 ## ドキュメント
 
-企画・設計の入口はこちらです。
+→ **[docs/readme.md](docs/readme.md)**（STEP A / B / C と企画ドキュメント）
 
-→ **[docs/readme.md](docs/readme.md)**
+## リポジトリ構成
 
-| 区分 | 内容 |
-| --- | --- |
-| product | ビジョン、ターゲット、ロードマップ、プラン、プレミアム価値 |
-| design | 簡易 UI |
-| dev | アーキテクチャ、データモデル、基本フロー、モバイル |
-| ops | デプロイ・管理画面の方針 |
-| releases | 版記録の置き方 |
+```text
+kataritsugi/
+├─ apps/
+│  ├─ server/   # Rails（API・マイページ・Admin）
+│  └─ staff/    # Expo Android（職員用・骨格）
+├─ compose.yml  # 開発用 MySQL
+└─ docs/
+```
 
-## 現状
+## 開発の始め方（STEP A）
 
-コード実装より先に、マークダウンによる製品企画・設計ドラフトを整備中です。
+```bash
+# MySQL（ホスト 3307。他の MySQL と共存用）
+docker compose up -d db
+
+# サーバ
+cd apps/server
+bundle install
+bin/rails db:prepare db:seed
+bin/rails server
+```
+
+シード:
+
+| 種別 | メール | パスワード |
+| --- | --- | --- |
+| User | demo@example.com | password123 |
+| Admin | admin@example.com | password123 |
+
+- マイページ: http://localhost:3000/mypage  
+- Admin: http://localhost:3000/admin  
+- API: `GET /api/v1/status`
+
+Staff アプリは [apps/staff/README.md](apps/staff/README.md)。
+
+詳細手順は [docs/dev/setup-step-a.md](docs/dev/setup-step-a.md)。

@@ -1,0 +1,12 @@
+{
+  // npm 自動検出は on。
+  // apps/staff の package.json は JSON として正しいが、Cursor の npm task 検出が
+  // openTextDocument 失敗などを「failed to parse」と誤表示することがある。
+  // 初回は exclude パターン **/apps/staff/** だけではディレクトリ本体にマッチせず効かなかったため、
+  // **/apps/staff も併記している（絶対パスは環境依存のため使わない）。
+  "npm.autoDetect": "on",
+  "npm.exclude": [
+    "**/apps/staff",
+    "**/apps/staff/**"
+  ]
+}
