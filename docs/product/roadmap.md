@@ -1,6 +1,9 @@
 # プロダクトロードマップ
 
+段階: **STEP C（本製品）**。前段は [STEP A](../step-a.md) / [STEP B](../prototype-facility-trial.md)。  
 ステータス: **方針ドラフト**
+
+下記の Phase 0〜5 は **STEP C 内の実装フェーズ** であり、プロジェクト全体の STEP A / B / C とは別物。
 
 ## 方針サマリ
 

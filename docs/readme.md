@@ -5,13 +5,22 @@
 
 ファイル名は小文字ハイフン区切り。用途ごとに `product` / `design` / `dev` / `ops` / `releases` に分ける。
 
-## 試験運用（プロトタイプ）
+## 段階ロードマップ（STEP A → B → C）
+
+| STEP | 位置づけ | 主な文書 |
+| --- | --- | --- |
+| **A** | 簡易・実装容易な前段階（検討骨格） | [step-a.md](step-a.md) |
+| **B** | 施設向け検証プロトタイプ | [prototype-facility-trial.md](prototype-facility-trial.md) |
+| **C** | 本製品「語り継ぎ」 | `product/` ほか design / dev / ops |
+
+## 試験運用・前段階（STEP A / B）
 
 | ファイル | 内容 |
 | --- | --- |
-| [prototype-facility-trial.md](prototype-facility-trial.md) | 施設向け検証プロトタイプ（QR セッション・日記／回顧録・Rails＋Android）。料金・製品ロードマップは対象外 |
+| [step-a.md](step-a.md) | STEP A。B より簡易な前段階の検討骨格 |
+| [prototype-facility-trial.md](prototype-facility-trial.md) | STEP B。施設向け検証プロトタイプ（QR セッション・日記／回顧録・Rails＋Android）。料金・製品ロードマップは対象外 |
 
-## product — 何を作るか
+## product — 何を作るか（STEP C）
 
 | ファイル | 内容 |
 | --- | --- |
@@ -52,7 +61,8 @@
 
 ## 置き場所の指針
 
-- 製品判断・仕様の方針 → `product/`
+- 段階（STEP A / B）の検討・試験 → ルート直下の `step-a.md` / `prototype-facility-trial.md`
+- 製品判断・仕様の方針（STEP C） → `product/`
 - 画面・体験の骨格 → `design/`
 - コードを書く人向け → `dev/`
 - 動かす／配る人向け → `ops/`

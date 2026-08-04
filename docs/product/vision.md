@@ -1,5 +1,6 @@
 # プロダクトビジョン
 
+段階: **STEP C（本製品）**。前段は [STEP A](../step-a.md) / [STEP B](../prototype-facility-trial.md)。  
 ステータス: **方針ドラフト**（実装状況は `docs/product/roadmap.md` を参照）
 
 ## 語り継ぎとは
