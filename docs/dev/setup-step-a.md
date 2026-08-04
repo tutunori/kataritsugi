@@ -67,7 +67,7 @@ npx expo start
 
 ## まだ未実装（次タスク）
 
-- 実 ASR / LLM 接続
-- Android での音声・画像撮影アップロード
+- [Staff 音声・画像アップロード](staff-media-upload-brief.md)（タスク 1・Windows 側指示書あり）
 - カメラによる QR 読取
+- 実 ASR / LLM 接続（Rails）
 - APK 自動更新フィード（tanagrid 同型の本実装）
